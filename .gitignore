@@ -1,0 +1,35 @@
+/tmp
+*.log
+
+# Build output directies #
+##########################
+/target
+*/target
+/build
+*/build
+
+# Play framwork management #
+############################
+sbt*.tgz
+sbt*.tgz.md5
+sbt-launcher*
+
+# Editor Files #
+################
+*~
+*.swp
+
+# IntelliJ specific files/directories #
+#######################################
+out
+.idea
+*.ipr
+*.iws
+*.iml
+
+# Eclipse specific files/directories #
+######################################
+.classpath
+.project
+.settings
+.metadata
