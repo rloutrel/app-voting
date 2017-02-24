@@ -1,9 +1,21 @@
-import org.scalatest._
+import scala.concurrent.Future
 
-class HelloControllerSpec extends FlatSpec {
+import org.scalatestplus.play._
+
+import play.api.mvc._
+import play.api.test._
+import play.api.test.Helpers._
+
+
+class HelloControllerSpec extends PlaySpec with Results {
   
-  "A Hello controller" should "exists" in {
-    val helloController = new HelloController
-  }
-  
+  "HelloController#sayHello" should {
+    "should say hello" in {
+      val helloController = new HelloController()
+      val result: Future[Result] = helloController.sayHello().apply(FakeRequest()) 
+      val bodyText: String = contentAsString(result)
+      bodyText mustBe "hello"
+    }
+  }  
+    
 }
