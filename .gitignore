@@ -7,6 +7,8 @@
 */target
 /build
 */build
+/bin
+/project/project
 
 # Play framwork management #
 ############################
