@@ -1,0 +1,1 @@
+GET 	/greetings  controllers.GreetingsController.sayHello()
